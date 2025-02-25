@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "kind": ["Views","Luxury","Bathroom","Double"],
+      "name": "View 1",
+      "info": "Lorem ipsum dolor sit amet, consectetur...",
+      "linkImg": "https://wp.hostlin.com/nilachol/images/gallery/1.jpg"
+    },
+    {
+      "id": 2,
+      "kind": ["Cars","Bathroom"],
+      "name": "Car 1",
+      "info": "Lorem ipsum dolor sit amet, consectetur...",
+      "linkImg": "https://wp.hostlin.com/nilachol/images/gallery/2.jpg"
+    },
+    {
+      "id": 3,
+      "kind": ["home","Bed","Deluxe","Luxury","Double" ],
+      "name": "View 2",
+      "info": "Lorem ipsum dolor sit amet, consectetur...",
+      "linkImg": "https://wp.hostlin.com/nilachol/images/gallery/3.jpg"
+    },
+    {
+      "id": 4,
+      "kind": ["Cars","Luxury","Bathroom","Double"],
+      "name": "Car 2",
+      "info": "Lorem ipsum dolor sit amet, consectetur...",
+      "linkImg": "https://wp.hostlin.com/nilachol/images/gallery/4.jpg"
+    },
+    {
+      "id": 5,
+      "kind": ["home","Bed","Bathroom"],
+      "name": "View 3",
+      "info": "Lorem ipsum dolor sit amet, consectetur...",
+      "linkImg": "https://wp.hostlin.com/nilachol/images/gallery/5.jpg"
+    },
+    {
+      "id": 6,
+      "kind": ["home","Bed","Deluxe" ,"Luxury","Bathroom","Double"],
+      "name": "Car 3",
+      "info": "Lorem ipsum dolor sit amet, consectetur...",
+      "linkImg": "https://wp.hostlin.com/nilachol/images/gallery/6.jpg"
+    },
+    {
+      "id": 7,
+      "kind": ["home","Bed","Bathroom"],
+      "name": "Car 3",
+      "info": "Lorem ipsum dolor sit amet, consectetur...",
+      "linkImg": "https://wp.hostlin.com/nilachol/images/gallery/7.jpg"
+    },
+    {
+      "id": 8,
+      "kind": ["home","Bed","Deluxe","Luxury","Bathroom","Double"],
+      "name": "Car 3",
+      "info": "Lorem ipsum dolor sit amet, consectetur...",
+      "linkImg": "https://wp.hostlin.com/nilachol/images/gallery/8.jpg"
+    }
+  ]
+  
