@@ -25,14 +25,14 @@ const stats = [
     id: 4,
     icon: "https://cdn-icons-png.flaticon.com/128/78/78846.png",
     number: 3650,
-    sign:"+",
+    sign: "+",
     text: "Cup of Coffee",
   },
 ];
 
 const Numbercounter = () => {
   return (
-    <div className=" bg-black/70 py-20  " >
+    <div className="bg-black/70 py-20">
       <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
         {stats.map((item) => (
           <div key={item.id} className="flex flex-col items-center">
@@ -41,14 +41,11 @@ const Numbercounter = () => {
               alt={item.text}
               className="w-14 h-14 mb-4 filter invert brightness-0"
             />
-            <h2 className="text-4xl font-bold text-[#77BA00]">
-              <CountUp start={0} end={item.number} duration={2.5} />
-              <span className="font-extrabold ">
-
-              {item?.sign} 
-              </span>
+            <h2 className="text-[50px] font-extrabold text-[#77BA00]">
+              <CountUp start={0} end={item.number} duration={2.5} formattingFn={(num) => num} /> 
+              <span className="font-extrabold text-5xl">{item?.sign}</span>
             </h2>
-            <p className="text-lg font-[800] ">{item.text}</p>
+            <p className="font-extrabold">{item.text}</p>
           </div>
         ))}
       </div>

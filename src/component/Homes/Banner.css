@@ -6,9 +6,9 @@
 }
 
 /* Adjusted clip-path values to create slight overlaps */
-.image-cut:nth-child(1) { clip-path: inset(0 0 0 88%); animation-delay: 550ms; }
-.image-cut:nth-child(2) { clip-path: inset(0 9% 0 77%); animation-delay: 600ms; }
-.image-cut:nth-child(3) { clip-path: inset(0 18% 0 66%); animation-delay: 650ms; }
+.image-cut:nth-child(1) { clip-path: inset(0 0 0 88%); animation-delay: 1150ms; }
+.image-cut:nth-child(2) { clip-path: inset(0 9% 0 77%); animation-delay: 900ms; }
+.image-cut:nth-child(3) { clip-path: inset(0 18% 0 66%); animation-delay: 950ms; }
 .image-cut:nth-child(4) { clip-path: inset(0 27% 0 55%); animation-delay: 700ms; }
 .image-cut:nth-child(5) { clip-path: inset(0 36% 0 44%); animation-delay: 750ms; }
 .image-cut:nth-child(6) { clip-path: inset(0 45% 0 33%); animation-delay: 800ms; }

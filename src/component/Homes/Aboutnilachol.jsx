@@ -14,10 +14,10 @@ function AboutNilachol() {
 
                 {/* Decorative Lines */}
                 <div className="w-28 border-b-[1px] border-[#6FB60B] mt-2"></div>
-                <div className="w-16 border-b-[1px] border-[#6FB60B] mt-1 mb-6"></div>
+                <div className="w-16 border-b-[1px] border-[#6FB60B] mt-[2px] mb-6"></div>
 
                 {/* Paragraph */}
-                <p className="text-gray-300 leading-[2.5] text-sm md:pr-36 ">
+                <p className="text-[#848484] leading-[2.5] text-sm md:pr-36 ">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt
                  ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco 
                  laboris nisi ut aliquip ex ea commo do consequat. Duis aute irure dolor in reprehenderit in
@@ -27,8 +27,8 @@ function AboutNilachol() {
                 </p>
 
                 {/* Button Section */}
-                <div className="mt-6">
-                    <button className="bg-[#6FB60B] text-white px-6 py-3 font-bold text-sm hover:bg-white transition duration-300">
+                <div className="mt-6 ">
+                    <button className="bg-[#6FB60B] text-white px-6 py-3 font-extrabold text-sm hover:bg-black transition duration-300">
                         LEARN MORE →
                     </button>
                 </div>

@@ -6,7 +6,7 @@ function Ourservice() {
         <>
             {/* Heading Section */}
             <div className="py-16 w-full flex flex-col items-center bg-[#F7F7F7]">
-                <span className="text-center text-4xl font-semibold">
+                <span className="text-center text-4xl ">
                     Our <span className="text-[#6FB60B]">Services</span>
                 </span>
 

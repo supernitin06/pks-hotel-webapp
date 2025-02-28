@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Albert Muzad",
+        "designation": "Founder",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed varius nulla. Ut et maximus nunc. Vivamus ligula metus, dapibus sed faucibus non, ultrices eu lorem. Sed leo nisl, eleifend sit amet nulla in, tristique consequat dui. Maecenas non risus nibh. Aliquam et lobortis dolor.",
+        "image": "https://wp.hostlin.com/nilachol/images/resource/t1.jpg"
+    },
+    {
+        "name": "Emily Watson",
+        "designation": "Co-Founder",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed varius nulla. Ut et maximus nunc. Vivamus ligula metus, dapibus sed faucibus non, ultrices eu lorem. Sed leo nisl, eleifend sit amet nulla in, tristique consequat dui. Maecenas non risus nibh. Aliquam et lobortis dolor.",
+        "image": "https://wp.hostlin.com/nilachol/images/resource/t2.jpg"
+    },
+    {
+        "name": "Michael Smith",
+        "designation": "Co-Founder",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed varius nulla. Ut et maximus nunc. Vivamus ligula metus, dapibus sed faucibus non, ultrices eu lorem. Sed leo nisl, eleifend sit amet nulla in, tristique consequat dui. Maecenas non risus nibh. Aliquam et lobortis dolor.",
+        "image": "https://wp.hostlin.com/nilachol/images/resource/t3.jpg"
+    }
+]

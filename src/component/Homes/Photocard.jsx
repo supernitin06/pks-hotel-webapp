@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import data from "../assets/json/Photo.json";
+import data from "../../assets/json/Photo.json";
 
 
 export function Photocard() {

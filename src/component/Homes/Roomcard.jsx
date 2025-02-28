@@ -1,5 +1,5 @@
 import React from "react";
-import roomData from "../assets/json/Roomcard.json";
+import roomData from "../../assets/json/Roomcard.json";
 
 function Roomcard() {
   return (
@@ -25,18 +25,20 @@ function Roomcard() {
 
             <div className="relative z-10">
               <a href="#">
-                <h3 className="mb-2 text-2xl font-semibold group-hover:text-white transition-all duration-500">
+                <h3 className="mb-2 text-xl  group-hover:text-white transition-all duration-500">
                   {room.name}
                 </h3>
               </a>
             </div>
 
             <div className="flex space-x-4 relative z-10">
-              <div className="text-gray-700 text-sm group-hover:text-white transition-all duration-500">
-                <span className="font-semibold text-lg text-[#6FB60B] group-hover:text-white">
+              <div className="text-[#A1A1A0] text-sm group-hover:text-white transition-all duration-500">
+                <span className=" text-lg text-[#6FB60B] group-hover:text-white font-light">
                   $250
-                </span>{" "}
+                </span>
+                <span className="font-light ">
                 / Night
+                </span>
               </div>
 
               {/* Vertical Line */}

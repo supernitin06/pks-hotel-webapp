@@ -1,12 +1,11 @@
 import React from 'react'
-import Navbar from '../component/Navbar'
-import Banner from '../component/Banner'
-import Roomsuit from '../component/Roomsuit'
-import AboutNilachol from '../component/Aboutnilachol'
-import Ourservice from '../component/Ourservice'
-import Photo from '../component/Photo'
-import Number from '../component/Number'
-import Map from '../component/Map'
+import Banner from '../component/Homes/Banner'
+import Roomsuit from '../component/Homes/Roomsuit'
+import AboutNilachol from '../component/Homes/Aboutnilachol'
+import Ourservice from '../component/Homes/Ourservice'
+import Photo from '../component/Homes/Photo'
+import Number from '../component/Homes/Number'
+import Map from '../component/Homes/Map'
 
 function Home() {
     return (

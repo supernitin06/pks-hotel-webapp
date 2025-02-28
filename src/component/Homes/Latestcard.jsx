@@ -51,22 +51,22 @@ function Latestcard() {  // Corrected function declaration
       {/* Featured Posts */}
       <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6   ">
         {featuredPosts.map((post) => (
-          <div key={post.id} className="bg-white  overflow-hidden  border-gray-100 border-[2px]   ">
+          <div key={post.id} className="bg-white  overflow-hidden  border-gray-300 border-[2px]   ">
             <img src={post.image} alt={post.title} className="w-full h-64  object-cover" />
             <div className="p-5">
-              <h3 className="text-lg font-semibold text-[20px] pb-4">{post.title}</h3>
-              <div className="flex items-center text-gray-500 text-sm mt-2 border-b  space-x-3 pb-4">
+              <h3 className="text-lg  text-[22px] pb-4">{post.title}</h3>
+              <div className="flex items-center text-[#A4A5A5] text-sm mt-2 border-b  space-x-3 pb-4">
                 <span className="flex items-center gap-1">
-                  <FaUser className="text-gray-400" /> {post.author}
+                  <FaUser className="text-[#A4A5A5]" /> {post.author}
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaHeart className="text-gray-300" /> {post.likes}
+                  <FaHeart className="text-[#A4A5A5]" /> {post.likes}
                 </span>
                 <span className="flex items-center gap-1">
-                  <FaComment className="text-gray-500 " /> {post.comments}
+                  <FaComment className="text-[#A4A5A5] " /> {post.comments}
                 </span>
               </div>
-              <p className="text-gray-600 text-sm mt-3 pb-4 ">{post.description}</p>
+              <p className="text-[#A4A5A5] text-sm mt-3 pb-4 ">{post.description}</p>
             </div>
           </div>
         ))}
@@ -79,7 +79,7 @@ function Latestcard() {  // Corrected function declaration
             <img src={post.image} alt={post.title} className="w-28   h-28  object-cover " />
             <div>
               <h4 className="font-semibold">{post.title}</h4>
-              <p className="text-gray-500 text-sm">{post.description}</p>
+              <p className="text-[#A4A5A5] text-sm">{post.description}</p>
             </div>
           </div>
         ))}

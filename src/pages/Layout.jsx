@@ -1,21 +1,23 @@
-import React from 'react'
-import {  Outlet } from 'react-router-dom'
-import Header from '../component/Header'
-import Navbar from '../component/Navbar'
-import Footer from '../component/Footer'
-function Layout() {
-    return (
-        <>
-       <div className='flex flex-col w-full'>
+import React, { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import Header from "../component/Homes/Header";
+import Navbar from "../component/Homes/Navbar";
+import Footer from "../component/Homes/Footer";
 
-       <Header/>
-       <Navbar/>
-       <Outlet/>
-       <Footer/>
-       </div>
-        
-        </>
-    )
+function Layout({ }) {
+ 
+
+ 
+  return (
+    <>
+      <div className="flex flex-col w-full">
+        <Header />
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
+    </>
+  );
 }
 
-export default Layout
+export default Layout;

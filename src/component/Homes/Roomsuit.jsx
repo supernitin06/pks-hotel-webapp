@@ -5,7 +5,7 @@ function Roomsuit() {
     return (
         <div className="py-16    w-full flex flex-col items-center">
             {/* Centered Heading with Styled "Suites" */}
-            <span className="text-center text-4xl   font-semibold">
+            <span className="text-center text-[38px]  font-medium    ">
                 Room & <span className="text-[#6FB60B]">Suites</span>
             </span>
             
