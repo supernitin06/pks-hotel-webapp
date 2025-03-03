@@ -11,7 +11,8 @@ export function Photocard() {
     const handleBtns = (e) => {
         const word = e.target.value;
         setActiveCategory(word);
-
+          console.log(word);
+           
         if (word === "All") {
             setCategory(data);
         } else {
@@ -57,7 +58,7 @@ export function Photocard() {
                         exit={{ opacity: 0, scale: 0.9 }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
-                        {/* Image */}
+                     
                         <img
                             className="h-[45vh] w-[100vw] py-0 object-cover transition-transform duration-500 ease-in-out group-hover:scale-100"
                             src={linkImg}
@@ -70,7 +71,7 @@ export function Photocard() {
                         {/* Black Overlay Sliding from Top to Bottom */}
                         <div className="absolute inset-x-0 top-[25vh] h-0 bg-black opacity-0 transition-[height,opacity] duration-[0ms] ease-in group-hover:h-full group-hover:opacity-70 group-hover:duration-[2000ms] group-hover:ease-out"></div>
 
-                        {/* Expand Button (Appears from Left) */}
+                        
 <motion.button
     className="absolute left-[-50px] bottom-0 bg-[#77BA00] px-[2vh]  py-[1vh]    text-white  shadow-md opacity-0 
                group-hover:left-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"

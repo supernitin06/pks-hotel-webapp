@@ -1,7 +1,7 @@
 import React from 'react'
-import FirstImage from '../component/Abouts/Firstimage'
-import Breadcrumb from '../component/Abouts/Breadcrumb'
-import Testimon from '../component/Abouts/Testimon'
+import FirstImage from '../component/abouts/Firstimage'
+import Breadcrumb from '../component/abouts/Breadcrumb'
+import Testimon from '../component/abouts/Testimon'
 
 function Testimonial() {
     return (

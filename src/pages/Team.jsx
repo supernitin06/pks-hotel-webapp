@@ -1,7 +1,7 @@
 import React from 'react'
-import FirstImage from '../component/Abouts/Firstimage'
-import Breadcrumb from '../component/Abouts/Breadcrumb'
-import Teamscard from '../component/Abouts/Teamscard'
+import FirstImage from '../component/abouts/Firstimage'
+import Breadcrumb from '../component/abouts/Breadcrumb'
+import Teamscard from '../component/abouts/Teamscard'
 
 function Team() {
   return (

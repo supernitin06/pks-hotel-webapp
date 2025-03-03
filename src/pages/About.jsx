@@ -1,8 +1,8 @@
 import React from "react";
-import FirstImage from "../component/Abouts/Firstimage";
-import Breadcrumb from "../component/Abouts/Breadcrumb";
-import Aboutsection from "../component/Abouts/Aboutsection";
-import Slideimage from "../component/Abouts/Slideimage";
+import FirstImage from "../component/abouts/Firstimage";
+import Breadcrumb from "../component/abouts/Breadcrumb";
+import Aboutsection from "../component/abouts/Aboutsection";
+import Slideimage from "../component/abouts/Slideimage";
 
 function Aboutus() {
   return (

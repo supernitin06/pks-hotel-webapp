@@ -1,7 +1,7 @@
 import React from 'react'
-import FirstImage from '../component/Abouts/Firstimage'
-import Breadcrumb from '../component/Abouts/Breadcrumb'
-import Detailroom from '../component/Abouts/Detailroom'
+import FirstImage from '../component/abouts/Firstimage'
+import Breadcrumb from '../component/abouts/Breadcrumb'
+import Detailroom from '../component/abouts/Detailroom'
 
 function Roomsdetail() {
     return (

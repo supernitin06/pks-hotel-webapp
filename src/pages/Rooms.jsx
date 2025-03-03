@@ -1,7 +1,7 @@
 import React from 'react'
-import FirstImage from '../component/Abouts/Firstimage'
-import Breadcrumb from '../component/Abouts/Breadcrumb'
-import Hotelroom from '../component/Abouts/Hotelroom'
+import FirstImage from '../component/abouts/Firstimage'
+import Breadcrumb from '../component/abouts/Breadcrumb'
+import Hotelroom from '../component/abouts/Hotelroom'
 
 function Rooms() {
     return (

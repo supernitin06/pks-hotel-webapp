@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Header from "../component/Homes/Header";
-import Navbar from "../component/Homes/Navbar";
-import Footer from "../component/Homes/Footer";
+import Header from "../component/homes/Header";
+import Navbar from "../component/homes/Navbar";
+import Footer from "../component/homes/Footer";
 
 function Layout({ }) {
  

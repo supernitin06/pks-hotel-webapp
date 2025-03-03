@@ -7,7 +7,7 @@ function FirstImage({ word }) {
       <div className="absolute inset-0 bg-black opacity-60 z-[1]"></div>
 
       {/* Text Above Everything */}
-      <div className="absolute z-[3] w-full h-full text-[40px] whi text-white  flex justify-center items-center     ">
+      <div className="absolute z-[3] w-full h-full text-[45px] whi text-white  flex justify-center items-center     ">
         <span>
         {word}
 

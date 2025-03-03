@@ -1,15 +1,16 @@
 import React from 'react'
-import Banner from '../component/Homes/Banner'
-import Roomsuit from '../component/Homes/Roomsuit'
-import AboutNilachol from '../component/Homes/Aboutnilachol'
-import Ourservice from '../component/Homes/Ourservice'
-import Photo from '../component/Homes/Photo'
-import Number from '../component/Homes/Number'
-import Map from '../component/Homes/Map'
+import Banner from '../component/homes/Banner'
+import Roomsuit from '../component/homes/Roomsuit'
+import AboutNilachol from '../component/homes/Aboutnilachol'
+import Ourservice from '../component/homes/Ourservice'
+import Number from '../component/homes/Number'
+import Map from '../component/homes/Map'
+import Photo from '../component/homes/Photo'
 
 function Home() {
     return (
         <>
+        
         <div>
       <Banner/>
       <Roomsuit/>

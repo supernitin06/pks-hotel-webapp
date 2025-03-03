@@ -1,26 +1,29 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
+    const location = useLocation();
+
+    // Check if the current path contains "404-page"
+    const is404Page = location.pathname.includes("/404-page");
+
     return (
         <footer
             className=" text-center text-white lg:text-left  font-sans relative   ">
 
-
-            <div
-                className="flex items-center justify-center   flex-wrap border-neutral-200  bg-[#6FB60B] lg:justify-around  py-5 md:py-7 lg: px-48  ">
-                <div className="  text-[30px] font-[700] pb-8  text-nowrap  font-poppins md:mr-[250px] md:pb-0 ">
-                    <span>Subscirbe Newsletter!</span>
+            {!is404Page && (
+                <div
+                    className="flex items-center justify-center flex-wrap border-neutral-200 bg-[#6FB60B] lg:justify-around py-5 md:py-7 lg:px-48">
+                    <div className="text-[30px] font-[700] pb-8 text-nowrap font-poppins md:mr-[250px] md:pb-0">
+                        <span>Subscribe Newsletter!</span>
+                    </div>
+                    <div>
+                        <button className="bg-[#6FB60B] text-white rounded-3xl px-9 font-bold md:py-2.5 hover:bg-black transition duration-300 border-[2px] focus:ring-2 focus:ring-white focus:outline-none">
+                            SUBSCRIBE NOW
+                        </button>
+                    </div>
                 </div>
-                <div>
-                    <button className="bg-[#6FB60B] text-white rounded-3xl px-9 font-bold  md:py-2.5 hover:bg-black transition duration-300 border-[2px]  focus:ring-2 focus:ring-white focus:outline-none">
-                        SUBSCRIBE NOW
-                    </button>
-
-                </div>
-            </div>
-
-
-
+            )}
 
             {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
 
