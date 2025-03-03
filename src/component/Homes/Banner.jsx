@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Banner.css"; // External CSS for clip-path animation
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -106,12 +107,17 @@ function Banner() {
                   </span>
                 </p>
                 <div className="flex space-x-4">
+                <Link to="/aboutus">
+
                   <button className="lg:px-9 lg:py-3 text-[9px] py-1 px-5 lg:text-[15px]  bg-[#77BA00] border-[#77BA00] text-white border-2 hover:bg-transparent hover:text-[#77BA00] font-semibold rounded-3xl transition">
                     ABOUT US
                   </button>
+                </Link>
+                <Link to="/contact">
                   <button className="lg:px-9 lg:py-3 text-[9px] py-1 px-5 lg:text-[15px] bg-transparent text-[#77BA00] border-[#77BA00] border-2 hover:bg-[#77BA00] hover:text-white font-semibold rounded-3xl transition">
                     CONTACT US
                   </button>
+                </Link>
                 </div>
               </motion.div>
             </motion.div>

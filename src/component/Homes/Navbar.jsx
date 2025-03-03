@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { easeInOut, motion } from "framer-motion";
 
 export default function Navbar() {
   const location = useLocation();
@@ -24,137 +24,250 @@ export default function Navbar() {
     setOpenSubMenus({ about: false, pages: false });
     setMenuOpen(false);
   }, [location.pathname]);
+  useEffect(() => {
+    if (openmodel) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to reset overflow on unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openmodel]);
 
   const isActiveParent = (paths) => {
     return paths.some((path) => location.pathname.includes(path));
   }
   return (
     <>
+    <div className="hidden md:flex  justify-center px-28    bg-black">
 
       <nav className="bg-white text-black font-bold shadow  md:px-4 px-1  w-full sticky top-0 z-50 flex md:justify-center">
         {/* Mobile View */}
-        <div className="md:hidden">
-          <div className="flex space-x-48    items-center mt-2 py-2 bg-slate-100 ">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-3xl text-[#77BA00] font-bold"
-            >
-              ☰
-            </button>
-            <button className="px-7 py-3   text-[15px] bg-[#77BA00] text-white hover:bg-black rounded-3xl">
-              APPOINTMENT
-            </button>
+        <div className="md:hidden w-full p-2 ">
+          <div className="flex justify-between   py-3 items-center  bg-slate-100 ">
+
+            <div>
+
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="text-3xl text-[#77BA00] ml-3 font-bold"
+              >
+                ☰
+              </button>
+            </div>
+            <div>
+
+              <button className="px-7 py-3  mr-3 text-[15px] bg-[#77BA00] text-white hover:bg-black rounded-3xl"
+               onClick={() => setopenmodel(true)}
+              >
+                APPOINTMENT
+              </button>
+            </div>
           </div>
 
           {menuOpen && (
-            <ul className="mt-4 space-y-2 bg-black px-4 py-2">
-              <li>
-                <NavLink
-                  to="/home"
-                  className={({ isActive }) =>
-                    isActive ? "text-red-500 font-bold" : "text-white font-bold hover:text-blue-400"
-                  }
-                >
-                  HOME
-                </NavLink>
+            <ul className="mt-4  bg-black">
+              <li className="flex justify-between items-center border-b-[1px] border-white">
+                <div className="px-4">
+                  <NavLink
+                    to="/home"
+                    className={({ isActive }) =>
+                      isActive ? "text-red-500 font-bold" : "text-white font-normal text-[14px] hover:text-blue-400"
+                    }
+                  >
+                    HOME
+                  </NavLink>
+                </div>
+                <div className="border-l-[1px] px-3 py-2 border-white">
+                  <i className="text-white text-xl font-light ri-arrow-down-s-line"></i>
+                </div>
               </li>
-              <li>
-                <button
-                  className={`text-white font-bold ${isActiveParent(["/aboutus", "/team"]) ? "text-red-500" : "hover:text-blue-400"
-                    }`}
-                  onClick={() => toggleDropdown("about")}
-                >
-                  ABOUT ▼
-                </button>
-                {openSubMenus.about && (
-                  <ul className="ml-4 mt-2 space-y-2">
-                    <li>
-                      <NavLink
-                        to="/aboutus"
-                        className={({ isActive }) =>
-                          isActive ? "text-red-500" : "text-white hover:text-blue-400"
-                        }
-                      >
-                        About Us
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/team"
-                        className={({ isActive }) =>
-                          isActive ? "text-red-500" : "text-white hover:text-blue-400"
-                        }
-                      >
-                        Team
-                      </NavLink>
-                    </li>
-                  </ul>
-                )}
+          
+              <li className="flex  justify-between items-center border-b-[1px] border-white">
+                <div className="px-4">
+                  <button
+                    className={`text-white font-normal text-[14px] ${isActiveParent(["/aboutus", "/team" ]) ? "text-red-500" : "hover:text-blue-400"}`}
+
+                  >
+                    ABOUT
+                  </button>
+                </div>
+                <div className="border-l-[1px] px-3 py-2 border-white">
+                  <i className="text-white text-xl font-light ri-arrow-down-s-line"
+                    onClick={() => toggleDropdown("about")}
+                  >
+                  </i>
+                </div>
               </li>
-              <li>
-                <NavLink
-                  to="/services"
-                  className={({ isActive }) =>
-                    isActive ? "text-red-500 font-bold" : "text-white font-bold hover:text-blue-400"
-                  }
+
+              {openSubMenus.about && (
+
+
+                <ul
+                  as={motion.ul}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -30 }}
+                  transition={{
+                    duration: 2, // Slow and smooth
+                    ease: [1, 1, 0.5, 1], // Custom smooth easing
+                  }}
+                  className=" mt-2 space-y-2"
                 >
-                  SERVICES
-                </NavLink>
+                  <li className=" border-b-[1px] pl-6 border-white font-light">
+                    <NavLink
+                      to="/aboutus"
+                      className={({ isActive }) =>
+                        isActive ? "text-red-500" : "text-white hover:text-blue-400"
+                      }
+                    >
+                      About Us
+                    </NavLink>
+                  </li>
+                  <li className=" border-b-[1px] pl-6 border-white font-light">
+                    <NavLink
+                      to="/team"
+                      className={({ isActive }) =>
+                        isActive ? "text-red-500" : "text-white hover:text-blue-400"
+                      }
+                    >
+                      Team
+                    </NavLink>
+                    
+                  </li>
+                  <li className=" border-b-[1px] pl-6 border-white font-light">
+                    <NavLink
+                      to="/rooms"
+                      className={({ isActive }) =>
+                        isActive ? "text-red-500" : "text-white hover:text-blue-400"
+                      }
+                    >
+                      Rooms
+                    </NavLink>
+                    
+                  </li>
+                  <li className=" border-b-[1px] pl-6 border-white font-light">
+                    <NavLink
+                      to="/roomdetail"
+                      className={({ isActive }) =>
+                        isActive ? "text-red-500" : "text-white hover:text-blue-400"
+                      }
+                    >
+                    Room Details
+                    </NavLink>
+                    
+                  </li>
+                  <li className=" border-b-[1px] pl-6 border-white font-light">
+                    <NavLink
+                      to="/testimonial"
+                      className={({ isActive }) =>
+                        isActive ? "text-red-500" : "text-white hover:text-blue-400"
+                      }
+                    >
+                  Testimonial
+                    </NavLink>
+                    
+                  </li>
+                </ul>
+
+              )}
+
+              <li className="flex justify-between items-center border-b-[1px] border-white">
+                <div className="px-4">
+                  <NavLink
+                    to="/services"
+                    className={({ isActive }) =>
+                      isActive ? "text-red-500 font-bold" : "text-white font-normal text-[14px] hover:text-blue-400"
+                    }
+                  >
+                    SERVICES
+                  </NavLink>
+                </div>
+                <div className="border-l-[1px] px-3 py-2 border-white">
+                  <i className="text-white text-xl font-light ri-arrow-down-s-line"></i>
+                </div>
               </li>
-              <li>
-                <button
-                  className={`text-white font-bold ${isActiveParent(["/gallery-box", "/404"]) ? "text-red-500" : "hover:text-blue-400"
-                    }`}
-                  onClick={() => toggleDropdown("pages")}
-                >
-                  PAGES ▼
-                </button>
-                {openSubMenus.pages && (
-                  <ul className="ml-4 mt-2 space-y-2">
-                    <li>
-                      <NavLink
-                        to="/gallery-box"
-                        className={({ isActive }) =>
-                          isActive ? "text-red-500" : "text-white hover:text-blue-400"
-                        }
-                      >
-                        Gallery Box
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/404"
-                        className={({ isActive }) =>
-                          isActive ? "text-red-500" : "text-white hover:text-blue-400"
-                        }
-                      >
-                        404 Page
-                      </NavLink>
-                    </li>
-                  </ul>
-                )}
+
+              <li className="flex justify-between items-center border-b-[1px] border-white">
+                <div className="px-4">
+                  <button
+                    className={`text-white font-normal text-[14px] ${isActiveParent(["/gallery-box", "/404"]) ? "text-red-500" : "hover:text-blue-400"}`}
+                  >
+                    PAGES
+                  </button>
+                </div>
+                <div className="border-l-[1px] px-3 py-2 border-white">
+                  <i className="text-white text-xl font-light ri-arrow-down-s-line"
+                    onClick={() => toggleDropdown("pages")}
+                  ></i>
+                </div>
               </li>
-              <li>
-                <NavLink
-                  to="/news"
-                  className={({ isActive }) =>
-                    isActive ? "text-red-500 font-bold" : "text-white font-bold hover:text-blue-400"
-                  }
-                >
-                  NEWS
-                </NavLink>
+
+              {openSubMenus.pages && (
+                <ul className=" space-y-2">
+                <li className=" border-b-[1px] pl-6 pt-2 border-white font-light">
+                    <NavLink
+                      to="/gallery-box"
+                      className={({ isActive }) =>
+                        isActive ? "text-red-500" : "text-white hover:text-blue-400"
+                      }
+                    >
+                Gallery Box
+                    </NavLink>
+                    
+                  </li>
+                  
+                  <li className=" border-b-[1px] pl-6 border-white font-light">
+                    <NavLink
+                      to="/404-page"
+                      className={({ isActive }) =>
+                        isActive ? "text-red-500" : "text-white hover:text-blue-400"
+                      }
+                    >
+                    404-page
+                    </NavLink>
+                    
+                  </li>
+                </ul>
+              )}
+
+              <li className="flex justify-between items-center border-b-[1px] border-white">
+                <div className="px-4">
+                  <NavLink
+                    to="/news"
+                    className={({ isActive }) =>
+                      isActive ? "text-red-500 font-bold" : "text-white font-normal text-[14px] hover:text-blue-400"
+                    }
+                  >
+                    NEWS
+                  </NavLink>
+                </div>
+                <div className="border-l-[1px] px-3 py-2 border-white">
+                  <i className="text-white text-xl font-light ri-arrow-down-s-line"></i>
+                </div>
               </li>
-              <li>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive ? "text-red-500 font-bold" : "text-white font-bold hover:text-blue-400"
-                  }
-                >
-                  CONTACT
-                </NavLink>
+
+              <li className="flex justify-between items-center border-b-[1px] border-white">
+                <div className="px-4">
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      isActive ? "text-red-500 font-bold" : "text-white font-normal text-[14px] hover:text-blue-400"
+                    }
+                  >
+                    CONTACT
+                  </NavLink>
+                </div>
+                <div className="border-l-[1px] px-3 py-2 border-white">
+                  <i className="text-white text-xl font-light ri-arrow-down-s-line"></i>
+                </div>
               </li>
             </ul>
+
+
           )}
         </div>
 
@@ -164,10 +277,12 @@ export default function Navbar() {
         {/* Desktop View */}
         <div className="hidden md:flex lg:w-[1200px]  items-center justify-between">
           <div className="flex items-center">
+          <Link to='/home'>
             <img src="https://wp.hostlin.com/nilachol/images/logo/logo.png" alt="Logo" className="h-[50px] w-full  my-6 " />
+          </Link>
           </div>
 
-          <ul className="flex items-center space-x-9 md:ml-11">
+          <ul className="flex items-center space-x-9 md:ml-11 flex-wrap">
             <li className=" py-7  ">
               <NavLink
                 to="/home"
@@ -288,67 +403,92 @@ export default function Navbar() {
         </div>
 
       </nav>
-   
+    </div>
 
-{openmodel && (
-  <div
-    className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-    onClick={() => setopenmodel(false)} // Close modal on background click
-  >
-    <motion.div
-      className="bg-white p-6 rounded-lg shadow-lg w-[90%] md:w-[400px]"
-      onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
-      initial={{ y: "-100%", opacity: 0 }} // Start position (top, hidden)
-      animate={{ y: "0%", opacity: 1 }} // Animate to visible position
-      exit={{ y: "-100%", opacity: 0 }} // Exit animation (slides back up)
-      transition={{ duration: 0.3, ease: "easeInOut" }} // Smooth transition
-    >
-      <h2 className="text-xl font-bold text-center mb-4">Book an Appointment</h2>
-      <form>
-        <div className="mb-2">
-          <label className="block text-sm font-medium">Name</label>
-          <input
-            type="text"
-            className="w-full border p-2 rounded-md"
-            placeholder="Enter your name"
-          />
-        </div>
-        <div className="mb-2">
-          <label className="block text-sm font-medium">Email</label>
-          <input
-            type="email"
-            className="w-full border p-2 rounded-md"
-            placeholder="Enter your email"
-          />
-        </div>
-        <div className="mb-2">
-          <label className="block text-sm font-medium">Date</label>
-          <input type="date" className="w-full border p-2 rounded-md" />
-        </div>
-        <div className="mb-4">
-          <label className="block text-sm font-medium">Message</label>
-          <textarea
-            className="w-full border p-2 rounded-md"
-            rows="3"
-            placeholder="Enter your message"
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-[#77BA00] text-white py-2 rounded-md hover:bg-black"
+
+
+      {openmodel && (
+        <div
+          className="fixed inset-0 flex items-center md:justify-center bg-black bg-opacity-50 z-50"
+          onClick={() => setopenmodel(false)} // Close modal on background click
         >
-          Submit
-        </button>
-      </form>
-      <button
-        className="mt-3 text-red-500 hover:underline block w-full text-center"
-        onClick={() => setopenmodel(false)}
-      >
-        Close
-      </button>
-    </motion.div>
-  </div>
-)}
+          <motion.div
+            className="bg-white relative p-6  shadow-lg w-[100%] md:h-[600px] h-[770px] mt-9 md:mt-0 space-y-16 md:space-y-6 pl-3 md:pl-4  md:w-[1000px]"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+            initial={{ y: "-100%", opacity: 0 }} // Start position (top, hidden)
+            animate={{ y: "0%", opacity: 1 }} // Animate to visible position
+            exit={{ y: "-100%", opacity: 0 }} // Exit animation (slides back up)
+            transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
+          >
+            <button
+              className="absolute top-4 right-4 text-gray-500 mr-4 md:mr-2 bg-red-700 hover:text-gray-800  "
+              onClick={() => setopenmodel(false)}
+            >
+              <i className="text-white  font-extrabold text-3xl ri-close-line"></i>
+            </button>
+
+            <h2 className="text-2xl font-bold mb-4">Make An Appointment</h2>
+            <form className="space-y-4">
+              {/* Name and Email */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full border border-gray-100 p-3 "
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full border text-gray-700 border-gray-100 p-3 rounded-md focus:border-gray-500 outline-none"
+                  required
+                />
+              </div>
+
+              {/* Check-in and Check-out */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="date"
+                  placeholder="Check In"
+                  className="w-full border text-gray-700 border-gray-100 p-3 "
+                  required
+                />
+                <input
+                  type="date"
+                  placeholder="Check Out"
+                  className="w-full border text-gray-700 border-gray-100 p-3 "
+                  required
+                />
+              </div>
+
+              {/* Discussion Dropdown */}
+              <select className="w-full border text-gray-700 border-gray-100 p-3 ">
+                <option>I want to discuss</option>
+                <option>Project Inquiry</option>
+                <option>Consultation</option>
+                <option>Other</option>
+              </select>
+
+              {/* Message */}
+              <textarea
+                placeholder="Your Message"
+                className="w-full border text-gray-700 border-gray-100 p-3  outline-none"
+                rows={4}
+                required
+              ></textarea>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-[200px]  bg-[#77BA00] text-white font-bold py-3 rounded-full hover:bg-black transition"
+              >
+                SUBMIT REQUEST
+              </button>
+            </form>
+
+          </motion.div>
+        </div>
+      )}
 
 
     </>

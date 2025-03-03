@@ -1,5 +1,6 @@
 import React from "react";
 import roomData from "../../assets/json/Roomcard.json";
+import { Link } from "react-router-dom";
 
 function Roomcard() {
   return (
@@ -24,11 +25,14 @@ function Roomcard() {
             <div className="absolute inset-0 bg-[#6FB60B] translate-y-full group-hover:translate-y-0 transition-transform duration-700"></div>
 
             <div className="relative z-10">
-              <a href="#">
+              
+              <Link to="/roomdetail">
+
                 <h3 className="mb-2 text-xl  group-hover:text-white transition-all duration-500">
                   {room.name}
                 </h3>
-              </a>
+              </Link>
+
             </div>
 
             <div className="flex space-x-4 relative z-10">

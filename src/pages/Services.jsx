@@ -1,6 +1,7 @@
 import React from 'react'
 import Breadcrumb from '../component/abouts/Breadcrumb'
 import FirstImage from '../component/abouts/Firstimage'
+import { Link } from 'react-router-dom'
 
 function Services() {
     return (
@@ -94,9 +95,12 @@ function Services() {
                             </div>
 
                             {/* Submit Button */}
+                            <Link to='/services'>
                             <button className="bg-[#76BB00] text-white font-semibold px-6 py-3 mt-4  w-full md:w-[260px] hover:bg-black  ">
                                 SEND YOUR MESSAGE
+                        
                             </button>
+                            </Link>
                         </form>
                     </div>
                 </div>

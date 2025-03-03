@@ -54,7 +54,7 @@ function App() {
     // Subscribe to route changes
     const unsubscribe = router.subscribe(() => {
       setLoading(true);
-      setTimeout(() => setLoading(false), 2000); // Show loading for 1 second
+      setTimeout(() => setLoading(false), 1000); // Show loading for 1 second
     });
 
     return () => unsubscribe(); // Cleanup on unmount

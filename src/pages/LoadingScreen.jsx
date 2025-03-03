@@ -5,11 +5,11 @@ const LoadingScreen = () => {
   return (
     <div className="relative flex items-center justify-center w-screen  h-screen">
       {/* Background Image */}
-      <div className="absolute inset-0 rounded-full opacity-90">
+      <div className="absolute inset-0  rounded-full opacity-90">
         <img
           src="https://wp.hostlin.com/nilachol/images/icons/preloader.gif"
           alt="Loading"
-          className="w-[100px] h-[100px] rounded-full object-cover"
+          className="w-[300px] h-[300px] mx-auto mt-[300px] rounded-full object-cover"
         />
       </div>
 

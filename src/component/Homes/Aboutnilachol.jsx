@@ -1,12 +1,25 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 function AboutNilachol() {
     const [showVideo, setShowVideo] = useState(false);
+    useEffect(() => {
+        if (showVideo) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+    
+        // Cleanup function to reset overflow on unmount
+        return () => {
+          document.body.style.overflow = "auto";
+        };
+      }, [showVideo]);
 
     return (
         <div className="flex flex-col md:flex-row w-full md:h-[520px] bg-[#1C1C1C] relative">
             {/* Content Section */}
-            <div className="flex flex-col  md:px-6 py-20 px-7  md:py-20 justify-center    lg:pl-44   w-full md:w-1/2  text-white">
+            <div className="flex flex-col  md:px-6 py-20 px-7  md:py-20 justify-center    lg:pl-64   w-full md:w-1/2  text-white">
                 {/* Heading */}
                 <h5 className="text-3xl font-bold">
                     About <span className="text-[#6FB60B]">Nilachol</span>
@@ -17,7 +30,7 @@ function AboutNilachol() {
                 <div className="w-16 border-b-[1px] border-[#6FB60B] mt-[2px] mb-6"></div>
 
                 {/* Paragraph */}
-                <p className="text-[#848484] leading-[2.5] text-sm md:pr-36 ">
+                <p className="text-[#848484] leading-[2] text-sm md:pr-36 ">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt
                  ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco 
                  laboris nisi ut aliquip ex ea commo do consequat. Duis aute irure dolor in reprehenderit in
@@ -28,9 +41,12 @@ function AboutNilachol() {
 
                 {/* Button Section */}
                 <div className="mt-6 ">
-                    <button className="bg-[#6FB60B] text-white px-6 py-3 font-extrabold text-sm hover:bg-black transition duration-300">
+                <Link to="/aboutus">
+
+                    <button className="bg-[#6FB60B] text-white px-9 py-3 font-extrabold text-md hover:bg-black transition duration-300">
                         LEARN MORE →
                     </button>
+                </Link>
                 </div>
             </div>
 
@@ -54,11 +70,13 @@ function AboutNilachol() {
 
             {/* Video Popup Modal */}
             {showVideo && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
+                onClick={() => setShowVideo(false)}>
+                  
                     <div className="relative w-[90%] max-w-3xl bg-black p-4 rounded-lg">
                         <button
                             onClick={() => setShowVideo(false)}
-                            className="absolute top-2 right-2 text-white text-3xl font-bold bg-red-600 hover:bg-red-800 rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                            className="absolute top-2 z-40 right-2 text-white text-3xl font-bold bg-red-600 hover:bg-red-800 rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
                         >
                             &times;
                         </button>

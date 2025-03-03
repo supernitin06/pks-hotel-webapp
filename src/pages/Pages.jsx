@@ -2,7 +2,7 @@
 import React from 'react'
 import Breadcrumb from "../component/abouts/Breadcrumb";
 import FirstImage from '../component/abouts/Firstimage';
-import { Gallery } from '../component/service/Gallery';
+import { Gallery } from '../component/pagecomponent/Gallery';
 function Pages() {
     return (
         <>

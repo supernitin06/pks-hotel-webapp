@@ -1,5 +1,6 @@
 import React from 'react';
 import service from '../../assets/json/Ourservice.json';
+import { Link } from 'react-router-dom';
 
 function Ourservicecard() {
     return (
@@ -16,7 +17,9 @@ function Ourservicecard() {
                     </div>
 
                     {/* Title */}
+                    <Link to="/services">
                     <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
+                    </Link>
 
                     {/* Description */}
                     <p className="text-[#9B9A9A] text-[13px] font-semibold text-center leading-relaxed cursor-pointer">

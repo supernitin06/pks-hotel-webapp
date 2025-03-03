@@ -17,6 +17,7 @@ const Sliderss = () => {
                     modules={[Pagination, Autoplay]} // Ensure Autoplay module is included
                     spaceBetween={30}
                     loop={true}
+                    grabCursor={true}
                     slidesPerView={1}
                     pagination={{ clickable: true }}
                     autoplay={{

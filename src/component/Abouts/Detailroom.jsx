@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 function Detailroom() {
     return (
 
@@ -101,7 +102,10 @@ function Detailroom() {
                                 <i class="ri-umbrella-line text-xl group-hover:text-[#76BB00]"></i>
                             </div>
                             <div>
+                            <Link to="/services">
+
                                 <h3 class="font-semibold text-lg text-gray-900">Natural Environment</h3>
+                            </Link>
                                 <p class="text-[#6c5f71] text-sm leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
                             </div>
                         </div>

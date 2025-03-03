@@ -40,7 +40,7 @@ const Teamslider = () => {
             loop={true}
             navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
             grabCursor={true}
-            speed={400}
+            speed={200}
             breakpoints={{
               320: { slidesPerView: 1 },
               640: { slidesPerView: 2 },
@@ -55,7 +55,7 @@ const Teamslider = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full md:h-[230px] h-[300px] md:object-cover px-4 md:px-0 py-3 md:py-0 mb-4"
+                    className="w-full md:h-[230px] h-[300px] md:object-cover cursor-pointer px-4 md:px-0 py-3 md:py-0 mb-4"
                   />
                   <div className="absolute inset-0 bg-[#76BB00] bg-opacity-70 flex flex-col items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-500">
                     <div className="flex space-x-4">

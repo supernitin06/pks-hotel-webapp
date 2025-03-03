@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Fouzerofour = () => {
   return (
@@ -11,9 +12,11 @@ const Fouzerofour = () => {
 
       {/* Responsive Container for Button and Search */}
       <div className="mt-6 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 w-[500px]">
+  <Link to="/home">
         <button className="bg-[#76BB00] text-white px-8 text-[13px] py-3 rounded-3xl font-semibold hover:bg-black transition w-full md:w-auto">
           GO HOME
         </button>
+  </Link>
        
         <div className="text-xl">
             or

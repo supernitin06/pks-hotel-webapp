@@ -1,6 +1,6 @@
 import React from 'react'
 import Breadcrumb from '../component/abouts/Breadcrumb'
-import Fouzerofour from '../component/service/Fourzerofour'
+import Fouzerofour from '../component/pagecomponent/Fourzerofour'
 
 function Fourzero() {
     return (
