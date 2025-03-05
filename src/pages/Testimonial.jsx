@@ -15,7 +15,7 @@ function Testimonial() {
       </div>
       <Breadcrumb
           link1={{ path: "/", name: "Home" }} //Link 1
-          link2={{ path: "/services", name: "Service" }} //LINk 2
+          link2={{ path: "/aboutus", name: "About" }} //LINk 2
           finalItem="testimonials"
           col1="black" // Color for first link
           col3="#76BB00" // Color for second link

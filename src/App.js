@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "@fontsource/poppins";
-import "@fontsource/poppins/300.css"; 
-import "@fontsource/poppins/600.css"; 
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/600.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Pages from "./pages/Pages";
 import Team from "./pages/Team";
@@ -18,32 +17,39 @@ import Roomsdetail from "./pages/Roomsdetail";
 import Testimonial from "./pages/Testimonial";
 import Fourzero from "./pages/Fourzero";
 import LoadingScreen from "./pages/LoadingScreen"; // Import Loading Screen
+import Login from "./pages/Login";
+import { Provider } from 'react-redux';
+import  Store,{persistor} from "./store/authstore";
+import Userprotected from "./component/protected/Userprotected";
+import { PersistGate } from "redux-persist/integration/react";
+import Profile from "./pages/Profile";
+
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
+  { path: "/", element: <Login /> }, // Login Route (Public)
+
+  { 
+    path: "/", 
+    element: <Userprotected><Layout/></Userprotected>, 
     children: [
-      { path: "", element: <Home /> },
-      { path: "home", element: <Home /> },
-      { path: "about", element: <About /> },
+      { path: "home", element: <Home />  },
       { path: "aboutus", element: <About /> },
       { path: "team", element: <Team /> },
       { path: "rooms", element: <Rooms /> },
       { path: "roomdetail", element: <Roomsdetail /> },
       { path: "testimonial", element: <Testimonial /> },
       { path: "services", element: <Services /> },
-      { path: "news", element: <Home/> },
+      { path: "news", element: <Home /> },
       { path: "contact", element: <Contact /> },
       { path: "pages", element: <Pages /> },
       { path: "gallery-box", element: <Pages /> },
       { path: "404-page", element: <Fourzero /> },
     ],
+
   },
+  { path: "profile", element: <Profile/> }
+
 ]);
-
-
-
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -63,7 +69,12 @@ function App() {
   return (
     <>
       {loading && <LoadingScreen />} {/* Show loading screen when loading */}
-      {!loading && <RouterProvider router={router} />}
+      <Provider store={Store}>
+      <PersistGate loading={null} persistor={persistor}>
+        {!loading && <RouterProvider router={router} />}
+      </PersistGate>
+      </Provider>
+
     </>
   );
 }

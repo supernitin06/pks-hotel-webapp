@@ -88,16 +88,16 @@ function Banner() {
                 animate={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ duration: 3, ease: "easeOut" }}
               >
-                <h2 className=" sm:text-4xl md:text-[50px] font-[1000] md:mb-4">
+                <span className=" sm:text-4xl md:text-[50px] font-[1000] md:mb-4">
                   <h2 className="whitespace-nowrap font-extrabold text-[20px] md:text-[55px] md:mb-7">
                     Travel Brings Power &amp; Love
                   </h2>
                   <h2 className="font-extrabold md:text-[55px] text-[20px] ">
                     back To your Life
                   </h2>
-                </h2>
+                </span>
 
-                <p className="lg:text-md  sm:text-lg mb-6">
+                <p className="lg:text-md  mt-6 sm:text-lg mb-6">
                 <span className="whitespace-nowrap text-[10px]  md:text-[21px] ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </span>

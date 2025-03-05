@@ -19,7 +19,7 @@ function AboutNilachol() {
     return (
         <div className="flex flex-col md:flex-row w-full md:h-[520px] bg-[#1C1C1C] relative">
             {/* Content Section */}
-            <div className="flex flex-col  md:px-6 py-20 px-7  md:py-20 justify-center    lg:pl-64   w-full md:w-1/2  text-white">
+            <div className="flex flex-col  md:px-6 py-20 px-7  md:py-20 justify-center    lg:pl-[260px]   w-full md:w-1/2  text-white">
                 {/* Heading */}
                 <h5 className="text-3xl font-bold">
                     About <span className="text-[#6FB60B]">Nilachol</span>

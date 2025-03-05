@@ -21,9 +21,12 @@ export default function Footer() {
                         <span>Subscribe Newsletter!</span>
                     </div>
                     <div>
-                        <button className="bg-[#6FB60B] text-white rounded-3xl px-9 font-bold md:py-2.5 hover:bg-black transition duration-300 border-[2px] focus:ring-2 focus:ring-white focus:outline-none">
+                    <Link to='/home' >
+
+                        <button className="bg-[#6FB60B] text-white rounded-3xl px-9 font-bold md:py-2.5 hover:bg-black transition duration-300 border-[2px] focus:outline-none">
                             SUBSCRIBE NOW
                         </button>
+                    </Link>
                     </div>
                 </div>
             )}

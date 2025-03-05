@@ -6,9 +6,9 @@ function Testimon() {
         <div className="w-full flex justify-center my-14">
             <div className="grid md:grid-cols-3 gap-6 p-6">
                 {Testimonial.map((member, index) => (
-                    <div key={index} className="bg-white md:w-[364px] w-[380px] border-[#f2f0f0] border-[1px] hover:shadow-xl hover:shadow-gray-200   duration-300  text-center overflow-hidden">
+                    <div key={index} className="bg-white md:w-[374px] w-[380px] border-[#f2f0f0] border-[1px] hover:shadow-xl hover:shadow-gray-200   duration-300  text-center overflow-hidden">
                         <div className='flex items-center flex-col'>
-                       <div  className='text-[14px] px-4  py-7 text-[#848484] '>
+                       <div  className='text-[15px] px-4 font-light py-7 text-[#848484] '>
                         {member.lorem}
                        </div>
                             <div className="">
@@ -24,7 +24,7 @@ function Testimon() {
                                 </h3>
                             </div>
                             <div>
-                                <h3 className="text-[14px] font-semibold text-[#76BB00] pb-10  cursor-pointer mt-[2px]">
+                                <h3 className="text-[15px] font-semibold text-[#76BB00] pb-10  cursor-pointer mt-[2px]">
                                     {member.country}
                                 </h3>
                             </div>

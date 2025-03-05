@@ -10,8 +10,8 @@ function Services() {
          <FirstImage word=" Service details" />
          <Breadcrumb
           link1={{ path: "/", name: "Home" }} //Link 1
-          link2={{ path: "/services", name: "Service" }} //LINk 2
-          finalItem="room details"
+          link2={{ name: "Service" }} //LINk 2
+          finalItem="service details"
           col1="black" // Color for first link
           col3="#76BB00" // Color for second link
           col2="#32CD32" // Color for final item
@@ -36,15 +36,15 @@ function Services() {
                     {/* Decorative Lines */}
                     <div className="w-20 border-b-[3px] border-[#89c13a] md:ml-0 ml-3 mt-1 mb-4"></div>
                     <div>
-                        <div className="space-y-4 text-gray-700 text-[16px] md:px-0 pr-10 md:pr-0 px-3 leading-relaxed">
+                        <div className="space-y-4 text-[#8D8584] font-light  text-[15px] md:px-0 pr-10 md:pr-0 px-3 leading-relaxed">
                             <p>
                                 Lorem ipsum dolor sit amet, vix an natum labitur
                                 eleifend, mel amet a laorit menandri. Ei justo complectitur duo.
                                 Ei mundi solet ut soletu mel possit quo. Sea cu justo laudem.
                                 An utinam consulatu eos, est facilis suscipiantur te, vim te iudico
-                                delenit voluptatibus. Lorem ipsum dolor sit amet, vix an natum labitur
+                              . Lorem ipsum dolor sit amet, vix an natum labitur
                                 eleifend, mel amet a laorit menandri. Ei justo complectitur duo. Ei mundi
-                                solet ut soletu mel possit quo. Sea cu justo laudem. An utinam consulatu eos,
+                                solet ut soletu mel possit quo. An utinam consulatu eos,
                                 est facilis suscipiantur te, vim te iudico delenit voluptatibus. Lorem ipsum
                                 dolor sit amet, vix an natum labitur eleifend, mel amet a laorit menandri.
                                 Ei justo complectitur duo. Ei mundi solet ut soletu mel possit quo. Sea cu justo
@@ -119,7 +119,7 @@ function Services() {
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg text-gray-900">Natural Environment</h3>
-                                <p class="text-[#6c5f71] text-sm leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
+                                <p class="text-[#8D8584] text-sm leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
                             </div>
                         </div>
 
@@ -129,7 +129,7 @@ function Services() {
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg text-gray-900">High Speed Wifi</h3>
-                                <p class="text-[#6c5f71] text-sm leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
+                                <p class="text-[#8D8584] text-sm leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
                             </div>
                         </div>
 
@@ -139,7 +139,7 @@ function Services() {
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg text-gray-900">Tasty Restaurant</h3>
-                                <p class="text-[#6c5f71] text-sm leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
+                                <p class="text-[#8D8584] text-sm leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
                             </div>
                         </div>
 
@@ -149,7 +149,7 @@ function Services() {
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg text-gray-900">Free Car Parking</h3>
-                                <p class="text-[#6c5f71] text-sm leading-loose">Lorem ipsum dolor sit amet,  adipiscing elit sed do eiusmod tempor</p>
+                                <p class="text-[#8D8584] text-sm leading-loose">Lorem ipsum dolor sit amet,  adipiscing elit sed do eiusmod tempor</p>
                             </div>
                         </div>
                     </div>

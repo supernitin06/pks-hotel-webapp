@@ -1,11 +1,13 @@
 import React from 'react'
 import Breadcrumb from '../component/abouts/Breadcrumb'
 import Fouzerofour from '../component/pagecomponent/Fourzerofour'
+import FirstImage from '../component/abouts/Firstimage'
 
 function Fourzero() {
     return (
         <>
          <div>
+         <FirstImage word= "Opps!! Page Not Found"/>
          <Breadcrumb
           link1={{ path: "/", name: "Home" }} //Link 1
           link2={{ path: "/about", name: "About Us" }} //LINk 2
